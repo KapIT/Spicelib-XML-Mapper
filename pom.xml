@@ -56,9 +56,7 @@
 						<keepAs3Metadata>Ignore</keepAs3Metadata>
 					</keepAs3Metadatas>
 					<includeTestFiles>
-		              <param>MetadataMapperTest.as</param>
-		              <param>PropertyMapperTest.as</param>
-		              <param>ExpressionTest.as</param>
+		              <param>XmlMapperSuite.as</param>
 		            </includeTestFiles>
                 </configuration>
             </plugin>
