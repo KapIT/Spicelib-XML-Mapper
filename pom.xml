@@ -17,6 +17,11 @@
     <build>
         <sourceDirectory>src/main</sourceDirectory>
         <testSourceDirectory>src/test</testSourceDirectory>
+        <resources>
+        	<resource>
+        		<directory>src/resources</directory>
+        	</resource>
+        </resources>
         <plugins>
             <plugin>
                 <groupId>org.sonatype.flexmojos</groupId>
@@ -58,6 +63,9 @@
 					<includeTestFiles>
 		              <param>XmlMapperSuite.as</param>
 		            </includeTestFiles>
+		            <includeFiles>
+            		 	<include>metadata.xml</include>
+            		</includeFiles>
                 </configuration>
             </plugin>
         </plugins>

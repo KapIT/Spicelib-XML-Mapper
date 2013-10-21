@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<annotations version="1.0">
+
+	<metadata name="Attribute" description="A metadata tag that can be used on properties that should map to XML attributes." >
+		<context name="variable" />
+		<context name="setter" />
+		<context name="getter" />
+		
+		<attribute name="uri" type="String" required="false" showHint="false"
+			description="The type the property must be assignable to."  />
+			
+		<attribute name="name" type="String" required="false" showHint="false"
+			description="The name of the attribute."  />
+			
+       	<attribute type="String" required="false" showHint="false"
+			description="The name of the attribute."  />
+	</metadata>
+	
+	
+	
+	<metadata name="ChildTextNode" description="A metadata tag that can be used on properties that should map to text nodes wrapped by child elements." >
+		<context name="variable" />
+		<context name="setter" />
+		<context name="getter" />
+		
+		<attribute name="uri" type="String" required="false" showHint="false"
+			description="The type the property must be assignable to."  />
+			
+		<attribute name="name" type="String" required="false" showHint="false"
+			description="The name of the child element holding the text node."  />
+			
+       	<attribute type="String" required="false" showHint="false"
+			description="The name of the child element holding the text node."  />
+	</metadata>
+	
+	
+	<metadata name="ChoiceId" description="A metadata tag that can be used on properties that should map to a choice of child elements 
+										   with a specific string identifier.
+										   The tag can be used on Array properties, too. In this case multiple child elements are allowed in the mapped XML.
+										   The choice is specified through an id in this case, and the elements which represent valid options for that choice
+										   have to be specified with XmlObjectMappings.choiceId" >
+		<context name="variable" />
+		<context name="setter" />
+		<context name="getter" />
+		
+       	<attribute type="String" required="true" showHint="false"
+			description="The id of the choice as specified in the corresponding XmlObjectMappings instance."  />
+	</metadata>
+	
+	
+	<metadata name="ChoiceType" description="A metadata tag that can be used on properties that should map to a choice of child elements that map to a particular 
+											 interface or class and its subtypes and implementors.
+											 The tag can be used on Array properties, too. In this case multiple child elements are allowed in the mapped XML." >
+		<context name="variable" />
+		<context name="setter" />
+		<context name="getter" />
+		
+       	<attribute type="Class" required="true" showHint="true" hint="classes"
+			description="The type that valid child elements map to. This is interpreted polymorphically."  />
+	</metadata>
+	
+	
+	<metadata name="Ignore" description="A metadata tag that can be used on properties that should not be mapped." >
+		<context name="variable" />
+		<context name="setter" />
+		<context name="getter" />
+	</metadata>
+	
+	<metadata name="TextNode" description="Represents a Metadata tag that can be used on properties that should map to text nodes." >
+		<context name="variable" />
+		<context name="setter" />
+		<context name="getter" />
+	</metadata>
+	
+	<metadata name="XmlMapping" description="Represents a Metadata tag that can be used on properties that should map to text nodes." >
+		<context name="class" />
+		
+		<attribute name="ignoreUnmappedAttributes" type="Boolean" required="false" showHint="true" defaultValue="false" hint="boolean"
+			description="Instructs the mapper to ignore attributes in XML that are not mapped to properties" />
+		
+		<attribute name="ignoreUnmappedChildren" type="Boolean" required="false" showHint="true" defaultValue="false" hint="boolean"
+			description="Instructs the mapper to ignore child elements in XML that are not mapped to properties." />
+			
+			
+		<attribute name="elementName" type="String" required="false" showHint="false"
+			description="IThe name of the XML element the class should map to." />
+			
+		<attribute name="elementUri" type="String" required="false" showHint="false"
+			description="The namespace uri of the XML element the class should map to." />
+		
+	</metadata>
+</annotations>
