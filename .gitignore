@@ -2,4 +2,5 @@
 /bin
 /.project
 /release
+/target
 build.properties
